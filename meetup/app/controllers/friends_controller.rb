@@ -6,12 +6,21 @@ class FriendsController < ApplicationController
 
   # GET /friends or /friends.json
   def index
-    @friends = Friend.all
+    @friends = Friend.all.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /friends/1 or /friends/1.json
   def show
+    @friends = Friend.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = FriendPdf.new(@friends)
+        send_data pdf.render
+      end
+    end  
   end
+
 
   # GET /friends/new
   def new
@@ -68,7 +77,7 @@ class FriendsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def friend_params
-      params.require(:friend).permit(:first_name, :last_name, :email, :phone, :twitter, :user_id)
+      params.require(:friend).permit(:first_name, :last_name, :email, :phone, :twitter, :user_id, :document)
     end
     def correct_user
       @friend = current_user.friends.find_by(id: params[:id])
