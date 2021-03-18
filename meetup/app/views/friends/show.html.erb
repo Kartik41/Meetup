@@ -22,6 +22,11 @@
   <strong>Twitter:</strong>
   <%= @friend.twitter %>
 </p>
+<p>
+  <strong>Image</strong>
+  <%= image_tag(@friend.image) %>
+</p>
+
 <% if can? :update, @friend %>
 <%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-primary" %> 
 <% end %>

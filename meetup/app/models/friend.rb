@@ -1,5 +1,5 @@
 class Friend < ApplicationRecord
-    has_many :friend_variant
+    has_one_attached :image
     belongs_to :user
     acts_as_paranoid
     
