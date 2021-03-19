@@ -23,6 +23,14 @@
   <%= @friend.twitter %>
 </p>
 <p>
+<h3>Favourite Books</h3>
+<ul>
+<% for @book in @friend.books %>
+   <li><%= @book.title %></li>
+<% end %>
+</ul>
+</p>
+<p>
   <strong>Image</strong>
   <%= image_tag(@friend.image) %>
 </p>
