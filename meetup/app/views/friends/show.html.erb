@@ -22,22 +22,6 @@
   <strong>Twitter:</strong>
   <%= @friend.twitter %>
 </p>
-<<<<<<< HEAD
-<p>
-<h3>Favourite Books</h3>
-<ul>
-<% for @book in @friend.books %>
-   <li><%= @book.title %></li>
-<% end %>
-</ul>
-</p>
-<p>
-  <strong>Image</strong>
-  <%= image_tag(@friend.image) %>
-</p>
-
-=======
->>>>>>> parent of 85fc773... Ruby gems will paginate, prawn, activestorage implemented
 <% if can? :update, @friend %>
 <%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-primary" %> 
 <% end %>

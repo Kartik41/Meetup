@@ -7,8 +7,8 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import 'cocoon';
-require("src/cocoon")
+
+
 require("jquery")
 
 
@@ -20,7 +20,3 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 85fc773... Ruby gems will paginate, prawn, activestorage implemented

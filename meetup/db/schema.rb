@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_03_18_064020) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -56,9 +55,7 @@ ActiveRecord::Schema.define(version: 2021_03_18_064020) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["friends_id"], name: "index_friend_variants_on_friends_id"
   end
-=======
 ActiveRecord::Schema.define(version: 2021_03_10_063937) do
->>>>>>> parent of 85fc773... Ruby gems will paginate, prawn, activestorage implemented
 
   create_table "friends", force: :cascade do |t|
     t.string "first_name"
@@ -86,11 +83,8 @@ ActiveRecord::Schema.define(version: 2021_03_10_063937) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "books", "friends"
   add_foreign_key "friend_variants", "friends", column: "friends_id"
-=======
->>>>>>> parent of 85fc773... Ruby gems will paginate, prawn, activestorage implemented
 end
