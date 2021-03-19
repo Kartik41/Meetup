@@ -20,4 +20,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 85fc773... Ruby gems will paginate, prawn, activestorage implemented
