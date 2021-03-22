@@ -1,6 +1,7 @@
 <h1>Friends</h1>
 
-<table class="table">
+
+<table class="table", id= "div1">
 <thead class="table-dark">
     <tr>
       <th>First name</th>
@@ -38,4 +39,8 @@
 <br>
 
 <%= link_to 'New Friend', new_friend_path,class: "btn btn-primary" %>
+<button>Click</button>
 <%= will_paginate @friends, :renderer => BootstrapPagination::Rails %>
+<script>
+
+    </script>

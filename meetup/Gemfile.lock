@@ -84,6 +84,7 @@ GEM
     climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
+    cocoon (1.2.15)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
     devise (4.7.3)
