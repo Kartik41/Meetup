@@ -10,7 +10,7 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = true
-
+  config.hosts << "cbbc7259d7f1.ngrok.io"
   # Show full error reports.
   config.consider_all_requests_local = true
 
@@ -75,5 +75,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   Paperclip.options[:command_path] = "/usr/bin/"
-
+  
 end
