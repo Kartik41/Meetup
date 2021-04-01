@@ -6,7 +6,9 @@ ruby '3.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use sqlite3 as the database for Active Record
+group :development, :test do
 gem 'sqlite3', '~> 1.4'
+end
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -32,13 +34,8 @@ gem 'will_paginate-bootstrap'
 gem 'prawn', '~> 2.4.0'
 gem 'prawn-table'
 gem 'cocoon'
-group :development do
-  gem "capistrano", "~> 3.16", require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
-end
+gem 'foreman'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
